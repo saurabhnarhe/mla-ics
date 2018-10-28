@@ -74,3 +74,6 @@ while True:
     plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
     for i in centroids.keys():
         plt.scatter(*centroids[i], color=colmap[i])
+    plt.xlim(0, 80)
+    plt.ylim(0, 80)
+    plt.show()

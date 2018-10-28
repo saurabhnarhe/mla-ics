@@ -18,8 +18,8 @@ public class CRT_JAVA {
  
     private static int mulInv(int a, int b) {
         int b0 = b;
-        int x0 = 0;
-        int x1 = 1;
+        int s0 = 0;
+        int s1 = 1;
  
         if (b == 1)
             return 1;
@@ -29,15 +29,15 @@ public class CRT_JAVA {
             int amb = a % b;
             a = b;
             b = amb;
-            int temp = x1 - q * x0;
-            x1 = x0;
-            x0 = temp;
+            int temp = s1 - q * s0;
+            s1 = s0;
+            s0 = temp;
         }
  
-        if (x1 < 0)
-            x1 += b0;
+        if (s1 < 0)
+            s1 += b0;
  
-        return x1;
+        return s1;
     }
  
     public static void main(String[] args) {

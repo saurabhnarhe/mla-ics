@@ -34,6 +34,7 @@ plt.xlabel('Sepal length')
 plt.ylabel('Sepal width')
 plt.xlim(xx.min(), xx.max())
 plt.title('SVC with linear kernel')
+plt.show()
 
 C = 1.0 # SVM regularization parameter
 svc = svm.SVC(kernel='rbf', C=C, decision_function_shape='ovr').fit(X, y)

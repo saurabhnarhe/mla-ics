@@ -65,10 +65,10 @@ for i in centroids.keys():
 
 # Continue until all assigned categories don't change any more
 while True:
-    closest_centroids = df['closest'].copy(deep=True)
+    old_centroids = df['closest'].copy(deep=True)
     centroids = update(centroids)
     df = assignment(df, centroids)
-    if closest_centroids.equals(df['closest']):
+    if old_centroids.equals(df['closest']):
         break
     fig = plt.figure(figsize=(5, 5))
     plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')

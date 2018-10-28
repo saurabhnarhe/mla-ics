@@ -1,7 +1,7 @@
 import java.util.*;
 import java.math.*;
 
-public class RSAInteger
+public class RSA
 {
  public static void main(String args[])
  {
